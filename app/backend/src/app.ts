@@ -1,14 +1,14 @@
 import * as express from 'express';
+import * as cors from 'cors';
+import loginRouter from './database/routes/login.routes';
 
 class App {
   public app: express.Express;
-  // ...
 
   constructor() {
     this.app = express();
-    // ...
+    this.app.use(express.json());
     this.config();
-    // ...
   }
 
   private config():void {
@@ -20,13 +20,14 @@ class App {
     };
 
     this.app.use(accessControl);
-    // ...
+    this.app.use('/login', loginRouter);
+    this.app.use(cors());
   }
 
   // ...
   public start(PORT: string | number):void {
     // ...
-    this.app.listen(PORT, () => { console.log('PORT'); });
+    this.app.listen(PORT, () => { console.log(PORT); });
   }
 }
 
