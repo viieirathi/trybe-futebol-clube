@@ -5,4 +5,9 @@ const teamsAllService = async () => {
   return getTeamsAll;
 };
 
+export const teamsIdService = async (id: string) => {
+  const getTeamsId = await Teams.findOne({ where: { id } });
+  return getTeamsId;
+};
+
 export default teamsAllService;
