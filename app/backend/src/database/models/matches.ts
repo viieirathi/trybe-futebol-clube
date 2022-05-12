@@ -41,7 +41,6 @@ Matches.init({
   },
   inProgress: {
     type: DataTypes.BOOLEAN,
-    allowNull: false,
   },
 }, {
   // ... Outras configs
