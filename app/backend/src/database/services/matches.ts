@@ -28,4 +28,9 @@ export const matchesFindTeams = async (homeTeam: string, awayTeam: string) => {
   return findTeams;
 };
 
+export const matchesFindUpId = async (homeTeamGoals: string, awayTeamGoals: string, id: string) => {
+  const updateGoals = await Matches.update({ homeTeamGoals, awayTeamGoals }, { where: { id } });
+  return updateGoals;
+};
+
 export default matchesAllService;
