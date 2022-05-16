@@ -3,6 +3,8 @@ import * as cors from 'cors';
 import loginRouter from './database/routes/login.routes';
 import teamsRouter from './database/routes/teams.routes';
 import matchesRouter from './database/routes/matches.routes';
+import leaderHome from './database/routes/leaderHome.routes';
+import leaderAway from './database/routes/leaderAway.routes';
 
 class App {
   public app: express.Express;
@@ -25,6 +27,8 @@ class App {
     this.app.use('/login', loginRouter);
     this.app.use('/teams', teamsRouter);
     this.app.use('/matches', matchesRouter);
+    this.app.use('/leaderboard', leaderHome);
+    this.app.use('/leaderboard', leaderAway);
     this.app.use(cors());
   }
 

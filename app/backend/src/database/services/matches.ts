@@ -1,4 +1,4 @@
-import IMatches from '../interfaces/IMatches';
+import ICreateMatches from '../interfaces/ICreateMatches';
 import Matches from '../models/matches';
 import Teams from '../models/teams';
 
@@ -12,7 +12,7 @@ const matchesAllService = async () => {
   return getMatchesAll;
 };
 
-export const matchesCreate = async (matches: IMatches) => {
+export const matchesCreate = async (matches: ICreateMatches) => {
   const createMatches = await Matches.create(matches);
   return createMatches;
 };

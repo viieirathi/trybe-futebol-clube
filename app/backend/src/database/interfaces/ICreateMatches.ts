@@ -1,5 +1,4 @@
-export default interface IMatches {
-  id?: number;
+export default interface ICreateMatches {
   homeTeam: number;
   awayTeam: number;
   homeTeamGoals: number;
