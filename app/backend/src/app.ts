@@ -5,6 +5,7 @@ import teamsRouter from './database/routes/teams.routes';
 import matchesRouter from './database/routes/matches.routes';
 import leaderHome from './database/routes/leaderHome.routes';
 import leaderAway from './database/routes/leaderAway.routes';
+// import leaderAll from './database/routes/leaderAll.routes';
 
 class App {
   public app: express.Express;
@@ -27,8 +28,7 @@ class App {
     this.app.use('/login', loginRouter);
     this.app.use('/teams', teamsRouter);
     this.app.use('/matches', matchesRouter);
-    this.app.use('/leaderboard', leaderHome);
-    this.app.use('/leaderboard', leaderAway);
+    this.app.use('/leaderboard', leaderHome, leaderAway);
     this.app.use(cors());
   }
 
