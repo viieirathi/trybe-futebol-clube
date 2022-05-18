@@ -27,3 +27,5 @@ export const matchesTest = [
 			"teamName": "Santos"
 		}
 	}];
+
+export const tokenAuthorization = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsInBhc3N3b3JkIjoic2VjcmV0X2FkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNjUyODgwOTcyLCJleHAiOjE2NTI5NjczNzJ9.1Z3bMj_iDEd16kPpEn9ouYeBlBUisaGmSU8Bf3qANHI'
