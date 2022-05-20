@@ -171,6 +171,7 @@ describe('Testa as rotas /Teams', () => {
       expect(chaiHttpResponse.body).to.be.deep.equal(mockTeams);
     });
   });
+
   describe('Testando rota /teams/:id', async () => {
 
     let chaiHttpResponse: Response;
